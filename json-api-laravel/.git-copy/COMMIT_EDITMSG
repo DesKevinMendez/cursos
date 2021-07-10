@@ -1,0 +1,1 @@
+Generate permission with command artisan: php artisan generate:permissions and run test

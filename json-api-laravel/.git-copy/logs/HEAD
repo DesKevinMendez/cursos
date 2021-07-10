@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 04577009d585ef903c660df8f9fdcaf8187c30e7 Kevin <kevin_mendez30@outlook.com> 1612498214 -0600	clone: from git@github.com:DesKevinMendez/json-api-laravel.git
+04577009d585ef903c660df8f9fdcaf8187c30e7 9cb385b1e8ba027f3783ea1ecaa438216f13e47a Kevin <kevin_mendez30@outlook.com> 1612503769 -0600	commit: Generate permission with command artisan: php artisan generate:permissions and run test
