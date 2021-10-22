@@ -4,10 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/juego.css">
+    <link rel="stylesheet" href="assets/css/juego.css" />
     <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <header class="titulo">Blackjack</header>
+
+    <div class="row mt-2">
+      <div class="col text-center">
+        <button class="btn btn-danger">Nuevo juego</button>
+        <button class="btn btn-primary">Perdir cartas</button>
+        <button class="btn btn-primary">Detener</button>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="col">
+        <h1>Jugador uno - <small>0</small> </h1>
+        <div id="jugador-cartas">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+        </div>
+      </div>
+    </div>
+
+    <div class="row container mt-2">
+      <div class="col">
+        <h1>Computadora <small>0</small> </h1>
+        <div id="jugador-cartas">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+        </div>
+      </div>
+    </div>
+
+
     <script src="assets/js/juego.js"></script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script> -->
   </body>
 </html>
