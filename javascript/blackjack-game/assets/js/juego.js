@@ -6,6 +6,7 @@ let puntosComputadora = 0;
 
 const btnPedir = document.querySelector('#btnPedir')
 const divCartasJugador = document.querySelector('#jugador-cartas')
+const divCartasComputadora = document.querySelector('#computadora-cartas')
 const smalls = document.querySelectorAll('small')
 
 const crearDeck = () => {
@@ -39,6 +40,24 @@ const valorCarta = (carta)=> {
     : parseInt(valor)
 }
 
+const turnoComputadora = (puntosMinimos) => {
+  do {
+    const carta = pedirCarta()
+    puntosComputadora = puntosComputadora + valorCarta(carta)
+    smalls[1].innerText = puntosComputadora
+  
+    const imgCarta = document.createElement('img')
+    imgCarta.classList.add('carta')
+    imgCarta.src = `assets/cartas/${carta}.png`
+    divCartasComputadora.append(imgCarta)
+
+    if(puntosMinimos > 21) {
+      break
+    }
+
+  } while ((puntosComputadora < puntosMinimos) && puntosminimos <= 21);
+}
+
 // Events
 
 btnPedir.addEventListener('click', (e)=>{
@@ -54,8 +73,11 @@ btnPedir.addEventListener('click', (e)=>{
   if (puntosJugador >= 21) {
     console.log('Perdiste man :v');
     btnPedir.disabled = true
+    turnoComputadora(puntosJugador)
   } else {
     console.log('Sigue jugando puto :v');
     divCartasJugador.append(imgCarta)
+    turnoComputadora(puntosJugador)
   }
 })
+
