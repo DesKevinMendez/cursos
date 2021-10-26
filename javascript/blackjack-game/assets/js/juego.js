@@ -5,6 +5,7 @@ let puntosJugador = 0;
 let puntosComputadora = 0;
 
 const btnPedir = document.querySelector('#btnPedir')
+const btnDetener = document.querySelector('#btnDetener')
 const divCartasJugador = document.querySelector('#jugador-cartas')
 const divCartasComputadora = document.querySelector('#computadora-cartas')
 const smalls = document.querySelectorAll('small')
@@ -69,15 +70,23 @@ btnPedir.addEventListener('click', (e)=>{
   const imgCarta = document.createElement('img')
   imgCarta.classList.add('carta')
   imgCarta.src = `assets/cartas/${carta}.png`
+  divCartasJugador.append(imgCarta)
 
-  if (puntosJugador >= 21) {
+  if (puntosJugador > 21) {
     console.log('Perdiste man :v');
     btnPedir.disabled = true
+    btnDetener.disabled = true
     turnoComputadora(puntosJugador)
-  } else {
-    console.log('Sigue jugando puto :v');
-    divCartasJugador.append(imgCarta)
+  } else if (puntosJugador === 21){
+    console.log('Ganaste puto');
+    btnPedir.disabled = true
+    btnDetener.disabled = true
     turnoComputadora(puntosJugador)
   }
 })
 
+btnDetener.addEventListener('click', ()=>{
+  btnPedir.disabled = true
+  btnDetener.disabled = true
+  turnoComputadora(puntosJugador)
+})
