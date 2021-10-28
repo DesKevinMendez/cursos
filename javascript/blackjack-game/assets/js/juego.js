@@ -1,5 +1,5 @@
 // // puntosJugador = 0;
-(() => {
+const miModulo = (() => {
   'use strict';
 
   let deck = []
@@ -134,5 +134,7 @@
   btnNuevo.addEventListener('click', ()=>{
     inicializarJuego()
   })
+
+  return { inicializarJuego }
 
 })()
