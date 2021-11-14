@@ -2,6 +2,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  output: { clean: true }, // regenera el build
   module: {
     rules: [
       {
