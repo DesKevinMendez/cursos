@@ -10,6 +10,8 @@
   "author": "Kevin Méndez <kevin_mendez30@outlook.com>",
   "license": "MIT",
   "devDependencies": {
+    "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.64.0",
     "webpack-cli": "^4.9.1"
   }
