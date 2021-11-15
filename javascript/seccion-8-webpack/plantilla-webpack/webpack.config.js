@@ -10,7 +10,11 @@ module.exports = {
         loader: 'html-loader',
         options: {
           minimize: false
-        }
+        },
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ],
   },
