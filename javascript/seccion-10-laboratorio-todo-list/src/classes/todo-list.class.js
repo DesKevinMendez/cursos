@@ -21,7 +21,8 @@ export class TodoList {
     }
   }
 
-  eliminarCompletado(id) {
-    
+  eliminarCompletado() {
+    this.todos = this.todos
+      .filter(todo => !todo.completado)
   }
 }
