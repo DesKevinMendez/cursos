@@ -4,7 +4,15 @@ const app = Vue.createApp({
   // }),
   setup: ()=> {
     value = Vue.ref('data')
-    return { value }
+
+    capitalize = ()=> {
+      value.value = value.value.toUpperCase()
+    }
+    change = (e) => {
+      value.value = 'new change'
+      capitalize();
+    }
+    return { value, change }
   }
 })
 
