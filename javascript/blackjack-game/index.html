@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/juego.css" />
+    <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="titulo">Blackjack</header>
+
+    <div class="row mt-2">
+      <div class="col text-center">
+        <button id="btnNuevo" class="btn btn-danger">Nuevo juego</button>
+        <button id="btnPedir" disabled="disabled" class="btn btn-primary">Perdir cartas</button>
+        <button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
+      </div>
+    </div>
+
+    <div class="row container">
+      <div class="col">
+        <h1>Jugador uno - <small>0</small> </h1>
+        <div id="jugador-cartas" class="divCartas">
+          <!-- <img src="assets/cartas/10C.png" class="carta"> -->
+          <!-- <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta"> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row container mt-2">
+      <div class="col">
+        <h1>Computadora <small>0</small> </h1>
+        <div id="computadora-cartas" class="divCartas">
+          <!-- <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta">
+          <img src="assets/cartas/10C.png" class="carta"> -->
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+    <script src="assets/js/juego.js"></script>
+
+    <script>
+      miModulo.inicializarJuego();
+    </script>
+  </body>
+</html>
