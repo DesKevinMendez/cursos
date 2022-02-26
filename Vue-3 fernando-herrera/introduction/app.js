@@ -1,10 +1,10 @@
 const app = Vue.createApp({
-  // data: ()=> ({
-  //   value: 'Desde app.js'
-  // }),
   setup: ()=> {
     value = Vue.ref('data')
-
+    vFor = Vue.reactive([
+      {id: 1, name: 'Kevin'},
+      {id: 2, name: 'Ezequiel'}
+    ])
     capitalize = ()=> {
       value.value = value.value.toUpperCase()
     }
@@ -12,7 +12,7 @@ const app = Vue.createApp({
       value.value = 'new change'
       capitalize();
     }
-    return { value, change }
+    return { value, change, vFor }
   }
 })
 
