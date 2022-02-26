@@ -12,7 +12,8 @@
       <h1>Hola mundo</h1>
       <p>{{ value }}</p>
       <button @click="change">Cambiar</button>
-      <div v-for="{id, name} in vFor" :key="f">{{ name }}</div>
+      <div v-for="{id, name} in vFor" :key="id">{{ name }}</div>
+      <input type="text" v-model="newValue" @keypress.enter="changeValue"/>
     </div>
     <script src="app.js"></script>
   </body>
